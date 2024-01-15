@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        #bodyLogin{
+        background-image: linear-gradient(to right, #5325fa, #ee5108);
+        height: 100vh;
+        }
+        #loginForm{
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+        h1{
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #title{
+            text-align: center;
+        }
+        #accessForm{
+            text-align: center;
+        }
+        label{
+                color: white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+            input{
+                border: none;
+                padding: 4px;
+            }
+            #loginButton{
+                padding: 8px;
+                min-width: 100px;
+                margin-top: 20px;
+                color: white;
+                background-color: rgb(255, 136, 0);
+                border-radius: 20px;
+                font-weight: bold;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 1em;
+                cursor: pointer;
+                box-shadow: 0px 2px 4px rgb(194, 194, 194);
+            }
+            #loginButton:hover{
+                scale: 102%;
+                background-color: rgb(69, 1, 228);
+            }
+    </style>
+</head>
+<body id="bodyLogin">
+    <div id="loginForm">
+        <div id="title">
+            <h1>Login</h1> 
+        </div>
+        <div id="accessForm">
+            <form action="processa_login.php" method="post">
+                <label for="username">Username:</label><br><br>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label><br><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <input id="loginButton" type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

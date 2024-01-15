@@ -1,0 +1,133 @@
+#profiloBody{
+    background-image: linear-gradient(to right, #5325fa, #ee5108);
+    #headProfile{
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: #2c1385;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0px 2px 4px #0f0436;
+        z-index: 999;
+        h1{
+            margin-left: 20px;
+        }
+    }
+    #footerProfile{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #2c1385;
+        text-align: right;
+        p{
+            margin-right: 20px;
+            a{
+                color: white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+    }
+    #menuProfile{
+            padding: 15px;
+            width: 25%;
+            position: fixed;
+            left: 0;
+            height: 100%;
+            overflow: auto;
+            background-color: #795ae9;
+            #vociProfile{
+                margin-top: 100px;
+                p{
+                    padding: 7px;
+                    color: white;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: bold;
+                    background-color: #5036af;
+                    border-radius: 4px;
+                    box-shadow: 0px 2px 2px #372283;
+                }
+                p:hover{
+                    cursor: pointer;
+                    scale: 98%;
+                }
+                #titleData{
+                    background-color: #0f0436;
+                }
+                #user-details{
+                    padding: 2px;
+                    p{
+                        font-size: 0.7em;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+        #contentProfile{
+            padding: 15px;
+            width: 72%;
+            position: fixed;
+            right: 0;
+            height: 100%;
+            overflow: auto;
+            background-image: linear-gradient(to right, #5325fa, #ee5108);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: 950px){
+                width: 60%;
+            }
+            #selectedContent{
+                width: 50%;
+                height: 50%;
+                padding: 10px;
+                height: fit-content;
+                @media (max-width: 950px){
+                    width: 80%;
+                    height: 60%;
+                }
+                p{
+                    color: white;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    @media (max-width: 950px){
+                        font-size: 0.9em;
+                    }
+                }
+                .card {
+                    border-radius: 20px;
+                    padding: 10px;
+                    margin: 10px 0;
+                    background-image: linear-gradient(to right, #ee3d1e, #f0711d);
+                    text-align: center;
+                    box-shadow: 0px 2px 4px rgb(58, 3, 58);
+                    h2{
+                        color: #0f0436;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        @media (max-width: 950px){
+                            font-size: 1em;
+                        }
+                    }
+                    p{
+                        color: white;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        font-weight: bold;
+                        font-size: 1.2em;
+                        @media (max-width: 950px){
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+                .card:hover{
+                    scale: 99%;
+                    cursor: pointer;
+                }
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+}

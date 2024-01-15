@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contatti</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body id="bodyContatti">
+    <!--TOPNAV-->
+    <div id="topnav">
+        <img id="logo" src="./immagini/Praesto-logo.png" alt="logo">
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+        <div class="menu-items">
+            <ul>
+                <li><a href="./index.html">Homepage</a></li>
+                <li><a href="./prodotti.html">Prodotti</a></li>
+                <li id="liSpecial"><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./contatti.html"><img id="tel" src="./immagini/iconaTel.png" alt="icona"></a></li>
+                <li id="accessoLink"><a href="#">Accedi</a></li>
+                <li id="registerLink"><a href="#">Registrati</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--TOPNAV-->
+        <!--REGISTRAZIONE-->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Crea un account</h2>
+                <form id="registrationForm">
+                    <input type="text" id="fullname" name="fullname" placeholder="Full name" required><br><br>
+                    <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+                    <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+                    <label for="terms">Registrandoti accetti i nostri  <a href="#">termini di servizio</a>.</label><br><br>
+                    <input type="submit" id="invio" value="Registrati">
+                </form>
+            </div>
+        </div>   
+        <!--REGISTRAZIONE-->
+        <!--ACCESSO-->
+        <div id="modalAccesso" class="modal">
+            <div class="modal-content">
+                <span class="close-accesso">&times;</span>
+                <h2>Bentornato!</h2>
+                <form id="accessoForm">
+                    <input type="email" id="emailAcc" name="email" placeholder="Email" required><br><br>
+                    <input type="password" id="passwordAcc" name="password" placeholder="Password" required><br><br>
+                    <label for="terms"><a href="#">Password dimenticata?</a></label><br><br>
+                    <input type="submit" id="accedi" value="Accedi">
+                </form>
+            </div>
+        </div>
+        <!--ACCESSO-->
+    <!--CONTENT-->
+    <div id="content">
+        <div id="left">
+            <div id="header">
+                <h3>Mettiti in contatto con noi</h3>
+            </div>
+            <div id="par">
+                <p>Contattaci ai recapiti che trovi qui sotto <br> o compila il modulo di contatto rapido <br> per raggiungerci più in fretta!</p>
+            </div>
+            <div id="list">
+                <ul>
+                    <li>E-mail: makeitpraesto@gmail.com</li>
+                    <li>E-mail: makeitpraesto@ufftec.com</li>
+                    <li>Numero: 0735705635</li>
+                </ul>
+            </div>
+        </div>
+        <div id="right">
+            <div id="head">
+                <h3>Modulo di contatto rapido</h3>
+            </div>
+            <div id="body">
+                <form id="contactForm" method="post" action="./backend/invia_form.php">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" required><br><br>
+                  
+                    <label for="cognome">Cognome:</label><br>
+                    <input type="text" id="cognome" name="cognome" required><br><br>
+                  
+                    <label for="email2">Email:</label><br>
+                    <input type="email" id="email2" name="email2" required><br><br>
+                  
+                    <label for="messaggio">Messaggio:</label><br>
+                    <textarea id="messaggio" name="messaggio" rows="4" cols="50" required></textarea><br><br>
+                    <p id="confermaMessaggio" style="color: rgb(7, 61, 7); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; font-size: 1em;"></p>
+                  
+                  
+            </div>
+            <div id="footer">
+                <br>
+                <input type="checkbox" id="termini" name="termini" required>
+                <label for="termini">Acconsento al trattamento dei dati personali.</label><br><br>
+                <div id="invio">
+                    <input type="submit" value="Invia">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+        <!--COOKIE BAR-->
+        <div id="cookie-bar">
+            <p style="font-weight: bold; font-size: 1.1em;">Questo sito utilizza i cookie per garantire la migliore esperienza utente.</p><a href="cookiepolicy.html" style="color: rgb(80, 10, 80); font-weight: bold; text-decoration: none;">Leggi la nostra politica sui cookie</a></p>
+            <button id="accept-btn">Accetta</button>
+            <button id="reject-btn">Rifiuta</button>
+        </div> 
+        <!--COOKIE BAR--> 
+    <!--CONTENT-->
+    <script src="./js/topnav.js"></script>
+    <script src="./js/cookie.js"></script>
+    <script src="./js/form.js"></script>
+</body>
+</html>

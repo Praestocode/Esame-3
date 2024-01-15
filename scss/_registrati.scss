@@ -1,0 +1,45 @@
+#bodyRegistrati{
+    background-image: linear-gradient(to right, #3e0cf3, #c74306);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    #contenutoR{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        #titoloR{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+            @media (max-width: 850px){
+                margin-top: 10px;
+            }
+            h1{
+                color: white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            p{
+                color: white;
+                font-size: 1.2em;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bold;
+                a{
+                    text-decoration: none;
+                    color: #300ab8;
+                }
+            }
+        }
+        #corpoR{
+            display: flex;
+            .modal-content{
+                margin-top: 100px;
+                @media (max-width: 850px){
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

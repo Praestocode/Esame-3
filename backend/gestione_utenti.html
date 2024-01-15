@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GestioneUtenti</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #5325fa, #ee5108);
+        }
+        h1{
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 20px;
+        }
+        #Lista{
+            margin-left: 20px;
+        }
+        th{
+            padding: 12px;
+            color: white;
+            background-color: #210c6b;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h2{
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 20px;
+        }
+        #inserisciUtente{
+            margin-left: 20px;
+        }
+        label{
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        td{
+            color: white;
+            background-color: #0b0325;
+            padding: 4px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+        }
+        #body{
+            display: flex;
+            margin-bottom: 50px;
+        }
+        #left{
+            width: 20%;
+            background-color: #0b0325;
+            padding: 20px;
+            padding: 20px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        #right{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            background-color: #0b0325;
+            padding: 20px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        #listaUtenti{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #searchInput{
+            margin-bottom: 20px;
+        }
+        h3{
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #editForm{
+            border-radius: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(134, 48, 233);
+            width: 20%;
+        }
+        #saveMod{
+            background-color: rgb(38, 0, 128);
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        #saveModCont{
+            margin-top: 10px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        #insertUser{
+            background-color: purple;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 1em;  
+        }
+        #searchUser{
+            background-color: purple;
+            border: none;
+            padding: 6px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 1em;
+            min-width: 100px;    
+        }
+        button{
+            background-color: #593abe;
+            font-weight: bold;
+            color: white;
+            border: none;
+            padding: 4px;
+            border-radius: 8px;
+        }
+        a{
+            text-decoration: underline;
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="goBack2"><a href="./gestione_generale.html">Torna indietro</a></div>
+    <div id="head">
+            <!--LISTA UTENTI-->
+    <div id="listaUtenti">
+        <h1>Lista Utenti</h1>
+        <div id="Lista">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>Email</th>
+                        <th>Attivita</th>
+                        <th>Settore</th>
+                        <th>Pubblico</th>
+                        <th>Utilizzo Logo</th>
+                        <th>Stile Preferito</th>
+                        <th>Interesse</th>
+                        <th>Azioni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td></td>
+                </tbody>
+            </table>
+        </div>
+        <!--LISTA UTENTI-->
+    </div>
+        <div id="body">
+        <div id="left">
+        <!--INSERISCI UTENTE-->
+        <div id="inserisciUtente">
+            <h2>Inserisci Utente</h2>
+            <form id="formInserisciUtente">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required>
+                <br>
+                <br>
+        
+                <label for="cognome">Cognome:</label><br>
+                <input type="text" id="cognome" name="cognome" required>
+                <br>
+                <br>
+        
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <br>
+
+                <label for="Attivita">Attivita</label><br>
+                <select name="Attivita" id="Attivita">
+                    <option value="Privato">Privato</option>
+                    <option value="Libero professionista">Libero professionista</option>
+                    <option value="Azienda">Azienda</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="Settore">Settore</label><br>
+                <select name="Settore" id="Settore">
+                    <option value="manifatturiero">Manifatturiero</option>
+                    <option value="Sanità/benessere">Sanità e benessere</option>
+                    <option value="Trasporti/logistica">Trasporti e logistica</option>
+                    <option value="Turismo/ospitalità">Turismo e ospitalità</option>
+                    <option value="Trasporti/logistica">Trasporti e logistica</option>
+                    <option value="Finanza/assicurazioni">Finanza e assicurazioni</option>
+                    <option value="Immobili">Immobili</option>
+                    <option value="Arte/intrattenimento">Arte e intrattenimento</option>
+                    <option value="Ambiente/sostenibilità">Ambiente e sostenibilità</option>
+                    <option value="Servizi di consultazione">Servizi di consultazione</option>
+                    <option value="Artigianato/design">Artigianato e design</option>
+                    <option value="Media/comunicazione">Media e comunicazione</option>
+                    <option value="Sport/tempo libero">Sport e tempo libero</option>
+                    <option value="Moda/abbigliamento">Moda e abbigliamento</option>
+                    <option value="Agricoltura/allevamento">Agricoltura e allevamento</option>
+                    <option value="Edilizia/manutenzione">Edilizia e manutenzione</option>
+                    <option value="Ristorazione">Ristorazione</option>
+                    <option value="Altro">Altro</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="Pubblico">Pubblico</label><br>
+                <select name="attivita" id="attivita">
+                    <option value="B2B">B2B</option>
+                    <option value="B2C">B2C</option>
+                    <option value="Entrambi">Entrambi</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="UtilizzoLogo">Utilizzo Logo</label><br>
+                <select name="UtilizzoLogo" id="UtilizzoLogo">
+                    <option value="Online">Online</option>
+                    <option value="Stampa">Stampa</option>
+                    <option value="Merchandising">Merchandisingi</option>
+                    <option value="Tutti">Tutti</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="StilePreferito">Stile Preferito</label><br>
+                <select name="StilePreferito" id="StilePreferito">
+                    <option value="Minimalista">Minimalista</option>
+                    <option value="Moderno">Moderno</option>
+                    <option value="Classico">Classico</option>
+                    <option value="Creativo/Eccentrico">Creativo/Eccentrico</option>
+                </select>
+                <br>
+                <br>
+
+                
+                <label for="Interesse">Interesse</label><br>
+                <select name="Interesse" id="Interesse">
+                    <option value="Logo">Logo</option>
+                    <option value="Logo/Logotipo">Logo/Logotipo</option>
+                    <option value="Classico">Classico</option>
+                    <option value="Logo/Logotipo/DesignAds">Logo/Logotipo/DesignAds</option>
+                </select>
+                <br>
+                <br>
+        
+                <button type="submit" id="insertUser">Inserisci Utente</button>
+            </form>
+        </div>
+        <!--INSERISCI UTENTE-->
+        </div>
+        <div id="right">
+        <!--MODIFICA UTENTE-->
+        <div class="container">
+            <h2>Ricerca Utente</h2>
+            <input type="text" id="searchInput" placeholder="Inserisci ID o Email">
+            <button id="searchUser" onclick="searchUser()">Cerca</button>
+    
+            <div id="resultTable"></div>
+        </div>
+        <div id="editForm" style="display: none;">
+            <h3>Modifica Utente</h3>
+            <form id="modifyUserForm" onsubmit="return modifyUser()">
+                <label for="newEmail">Nuova Email:</label>
+                <input type="text" id="newEmail" name="newEmail"><br>
+        
+                <label for="newAttivita">Nuova Attività:</label>
+                <select id="newAttivita" name="newAttivita">
+                    <option value="Privato">Privato</option>
+                    <option value="Libero professionista">Libero professionista</option>
+                    <option value="Azienda">Azienda</option>
+                </select><br>
+        
+                <label for="newSettore">Nuovo Settore:</label>
+                <select id="newSettore" name="newSettore">
+                    <option value="manifatturiero">Manifatturiero</option>
+                    <option value="Sanità/benessere">Sanità e benessere</option>
+                    <option value="Trasporti/logistica">Trasporti e logistica</option>
+                    <option value="Turismo/ospitalità">Turismo e ospitalità</option>
+                    <option value="Trasporti/logistica">Trasporti e logistica</option>
+                    <option value="Finanza/assicurazioni">Finanza e assicurazioni</option>
+                    <option value="Immobili">Immobili</option>
+                    <option value="Arte/intrattenimento">Arte e intrattenimento</option>
+                    <option value="Ambiente/sostenibilità">Ambiente e sostenibilità</option>
+                    <option value="Servizi di consultazione">Servizi di consultazione</option>
+                    <option value="Artigianato/design">Artigianato e design</option>
+                    <option value="Media/comunicazione">Media e comunicazione</option>
+                    <option value="Sport/tempo libero">Sport e tempo libero</option>
+                    <option value="Moda/abbigliamento">Moda e abbigliamento</option>
+                    <option value="Agricoltura/allevamento">Agricoltura e allevamento</option>
+                    <option value="Edilizia/manutenzione">Edilizia e manutenzione</option>
+                    <option value="Ristorazione">Ristorazione</option>
+                    <option value="Altro">Altro</option>
+                </select><br>
+
+                <label for="newPubblico">Nuovo Pubblico:</label>
+                <select id="newPubblico" name="newPubblico">
+                    <option value="B2B">B2B</option>
+                    <option value="B2C">B2C</option>
+                    <option value="Entrambi">Entrambi</option>
+                </select><br>
+
+                <label for="newUtilizzoLogo">Nuovo Utilizzo Logo:</label>
+                <select id="newUtilizzoLogo" name="newUtilizzoLogo">
+                    <option value="Online">Online</option>
+                    <option value="Stampa">Stampa</option>
+                    <option value="Merchandising">Merchandisingi</option>
+                    <option value="Tutti">Tutti</option>
+                </select><br>
+                
+                <label for="newStilePreferito">Nuovo Stile Preferito:</label>
+                <select id="newStilePreferito" name="newStilePreferito">
+                    <option value="Minimalista">Minimalista</option>
+                    <option value="Moderno">Moderno</option>
+                    <option value="Classico">Classico</option>
+                    <option value="Creativo/Eccentrico">Creativo/Eccentrico</option>
+                </select><br>
+
+                <label for="newInteresse">Nuovo Interesse:</label>
+                <select id="newInteresse" name="newInteresse">
+                    <option value="Logo">Logo</option>
+                    <option value="Logo/Logotipo">Logo/Logotipo</option>
+                    <option value="Classico">Classico</option>
+                    <option value="Logo/Logotipo/DesignAds">Logo/Logotipo/DesignAds</option>
+                </select><br>
+                <div id="saveModCont">
+        
+                <input id="saveMod" type="submit" value="Salva Modifiche">
+                </div>
+            </form>
+        </div>    
+        <!--MODIFICA UTENTE-->
+        </div>
+        </div>
+    </div>
+    <script src="/js/visualizza_utenti.js"></script>
+    <script src="/js/inserisci_utente.js"></script>
+    <script src="/js/modifica_utente.js"></script>
+</body>
+</html>

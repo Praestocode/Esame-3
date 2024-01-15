@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesso</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body id="bodyAccedi">
+    <div id="contenuto">
+        <div id="titolo">
+            <h1>Vuoi accedere?</h1>
+            <p>Effettua il log-in o torna alla <a href="./index.html">homepage</a></p>
+        </div>
+        <div id="corpo">
+                <div class="modal-content">
+                    <h2>Accedi</h2>
+                    <form action="./backend/accesso.php" id="accessoForm" method="post">
+                        <input type="email" id="emailAcc" name="email" placeholder="Email" required><br><br>
+                        <input type="password" id="passwordAcc" name="password" placeholder="Password" required><br><br>
+                        <div id="passwordError" class="error-message"></div>
+                        <label for="terms"><a href="#">Password dimenticata?</a></label><br><br>
+                        <input type="submit" id="accedi" value="Accedi">
+                    </form>
+                </div>
+        </div>
+    </div>
+    <script src="./js/accesso.js"></script>
+</body>
+</html>

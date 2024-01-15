@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Praesto</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #5325fa, #ee5108);
+        }
+        #mainG{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        #headG{
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            margin-top: 200px;
+            background-color: #1d0869;
+        }
+        h1{
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #bodyG{
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            min-height: 200px;
+            align-items: center;
+            background-color: #0b0325;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        #leftG{
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+            background-color: #301591;
+        }
+        #leftG:hover{
+            scale: 98%;
+        }
+        #rightG{
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+            background-color: #301591;
+        }
+        #rightG:hover{
+            scale: 98%;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        #goBackGG{
+            text-decoration: underline;
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+            margin-left: 20px;
+        }
+        #rightG2{
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+            background-color: #301591;
+        }
+        #rightG2:hover{
+            scale: 98%;
+        }
+    </style>
+</head>
+<body>
+    <div id="goBackGG"><a href="./login.html">Torna indietro</a></div>
+    <div id="mainG">
+        <div id="headG"><h1>Selezionare pagina di gestione</h1></div>
+        <div id="bodyG">
+            <div id="leftG">
+                <a href="./gestione_lavori.html">Gestione lavori</a>
+            </div>
+            <div id="rightG">
+                <a href="./gestione_utenti.html">Gestione utenti</a>
+            </div>
+            <div id="rightG2">
+                <a href="./visualizza_messaggi.html">Visualizza Messaggi</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

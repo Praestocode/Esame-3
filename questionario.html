@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>questionario</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body id="questionarioBody">
+  <form id="formQuestionario">
+  <div id="questions">
+    <!--FIRST QUESTION-->
+      <div class="question" id="question1">
+        <div id="title"><h2>1 di 7</h2></div>
+        <div id="question"><p>Scegli cosa meglio ti descrive:</p></div>
+        <div id="options">
+          <ul>
+            <li><input type="checkbox" name="Attivita" value="Privato"> Privato</li>
+            <li><input type="checkbox" name="Attivita" value="Libero professionista"> Libero professionista</li>
+            <li><input type="checkbox" name="Attivita" value="Azienda"> Azienda</li>
+          </ul>
+        </div>
+        <div class="avviso" style="display: none; color: red;"><p>Seleziona una risposta.</p></div>
+        <div id="buttons">
+          <button class="next-button" value="Invia Questionario" onclick="nextQuestion()">Conferma</button>
+        </div>
+      </div>
+    <!--FIRST QUESTION-->
+    <!--SECOND QUESTION-->
+      <div class="question" id="question2">
+        <div id="title"><h2>2 di 7</h2></div>
+        <div id="question"><p>Qual'è il tuo settore?</p></div>
+        <div id="options">
+          <select title="opzioni" name="settore"  size="5">
+            <option value="d2o1" disabled style="color: grey;">Scegli il tuo campo..</option>
+            <option value="manifatturiero">Manifatturiero</option>
+            <option value="Sanità/benessere">Sanità e benessere</option>
+            <option value="Trasporti/logistica">Trasporti e logistica</option>
+            <option value="Turismo/ospitalità">Turismo e ospitalità</option>
+            <option value="Trasporti/logistica">Trasporti e logistica</option>
+            <option value="Finanza/assicurazioni">Finanza e assicurazioni</option>
+            <option value="Immobili">Immobili</option>
+            <option value="Arte/intrattenimento">Arte e intrattenimento</option>
+            <option value="Ambiente/sostenibilità">Ambiente e sostenibilità</option>
+            <option value="Servizi di consultazione">Servizi di consultazione</option>
+            <option value="Artigianato/design">Artigianato e design</option>
+            <option value="Media/comunicazione">Media e comunicazione</option>
+            <option value="Sport/tempo libero">Sport e tempo libero</option>
+            <option value="Moda/abbigliamento">Moda e abbigliamento</option>
+            <option value="Agricoltura/allevamento">Agricoltura e allevamento</option>
+            <option value="Edilizia/manutenzione">Edilizia e manutenzione</option>
+            <option value="Ristorazione">Ristorazione</option>
+            <option value="Altro">Altro</option>
+          </select>
+        </div>
+        <div class="avviso" style="display: none; color: red;"><p>Seleziona almeno una risposta.</p></div>
+        <div id="buttons">
+          <button class="back-button" onclick="previousQuestion()">Indietro</button>
+          <button class="next-button" value="Invia Questionario" onclick="nextQuestion()">Conferma</button>
+        </div>
+      </div>
+    <!--SECOND QUESTION-->
+    <!--THIRD QUESTION-->
+      <div class="question" id="question3">
+        <div id="title"><h2>3 di 7</h2></div>
+        <div id="question"><p>Pubblico di Riferimento:</p></div>
+        <div id="options">
+          <ul>
+            <li><input type="checkbox" name="Pubblico" value="B2B"> B2B (Business to Business)</li>
+            <li><input type="checkbox" name="Pubblico" value="B2C"> B2C (Business to Consumer)</li>
+            <li><input type="checkbox" name="Pubblico" value="Entrambi"> Entrambi</li>
+          </ul>
+        </div>
+        <div class="avviso" style="display: none; color: red;"><p>Seleziona almeno una risposta.</p></div>
+        <div id="buttons">
+          <button class="back-button" onclick="previousQuestion()">Indietro</button>
+          <button class="next-button" value="Invia Questionario" onclick="nextQuestion()">Conferma</button>
+        </div>
+      </div>
+    <!--THIRD QUESTION-->
+    <!--FOURTH QUESTION-->
+      <div class="question" id="question4">
+        <div id="title"><h2>4 di 7</h2></div>
+        <div id="question"><p>Utilizzo del Logo:</p></div>
+        <div id="options">
+          <ul>
+            <li><input type="checkbox" name="UtilizzoLogo" value="Online"> Online (siti web, social media)</li>
+            <li><input type="checkbox" name="UtilizzoLogo" value="Stampa"> Stampa (biglietti da visita, brochure)</li>
+            <li><input type="checkbox" name="UtilizzoLogo" value="Merchandising"> Merchandising (magliette, gadget)</li>
+            <li><input type="checkbox" name="UtilizzoLogo" value="Tutti"> Tutti i precedenti</li>
+          </ul>
+        </div>
+        <div class="avviso" style="display: none; color: red;"><p>Seleziona almeno una risposta.</p></div>
+        <div id="buttons">
+          <button class="back-button" onclick="previousQuestion()">Indietro</button>
+          <button class="next-button" value="Invia Questionario" onclick="nextQuestion()">Conferma</button>
+        </div>
+      </div>
+    <!--FOURTH QUESTION-->
+    <!--FIFTH QUESTION-->
+      <div class="question" id="question5">
+        <div id="title"><h2>5 di 7</h2></div>
+        <div id="question"><p>Stile Preferito:</p></div>
+        <div id="options">
+          <ul>
+            <li><input type="checkbox" name="StilePreferito" value="Minimalista"> Minimalista</li>
+            <li><input type="checkbox" name="StilePreferito" value="Moderno"> Moderno</li>
+            <li><input type="checkbox" name="StilePreferito" value="Classico"> Classico</li>
+            <li><input type="checkbox" name="StilePreferito" value="Creativo/Eccentrico"> Creativo/Eccentrico</li>
+          </ul>
+        </div>
+        <div class="avviso" style="display: none; color: red;"><p>Seleziona almeno una risposta.</p></div>
+        <div id="buttons">
+          <button class="back-button" onclick="previousQuestion()">Indietro</button>
+          <button class="next-button" value="Invia Questionario" onclick="nextQuestion()">Conferma</button>
+        </div>
+      </div>
+    <!--FIFTH QUESTION-->
+    <!--SIXTH QUESTION-->
+      <div class="question" id="question6">
+        <div id="title"><h2>6 di 7</h2></div>
+        <div id="question"><p>Sei interessato a:</p></div>
+        <div id="options">
+          <ul>
+            <li><input type="checkbox" name="Interesse" value="Logo"> Solo un logo</li>
+            <li><input type="checkbox" name="Interesse" value="Logo/Logotipo"> Logo e logotipo</li>
+            <li><input type="checkbox" name="Interesse" value="Logo/Logotipo/DesignAds"> Logo, logotipo e design per pubblicità</li>
+          </ul>
+        </div>
+        <div class="avviso" style="display: none; color: red;"><p>Seleziona almeno una risposta.</p></div>
+        <div id="buttons">
+          <button class="back-button" onclick="previousQuestion()">Indietro</button>
+          <button class="next-button" value="Invia Questionario" onclick="nextQuestion()">Conferma</button>
+        </div>
+      </div>
+    <!--SIXTH QUESTION-->
+    <!--SEVENTH QUESTION-->
+    <div class="question" id="question7">
+      <div id="title"><h2>7 di 7</h2></div>
+      <div id="question"><p>Sei pronto ad iniziare?</p></div>
+      <div id="options">
+        <p id="finePar">Stai per entrare nella tua pagina utente</p>
+      </div>
+      <div id="buttons">
+        <button class="back-button" onclick="previousQuestion()">Indietro</button>
+        <button class="next-button" name="confermaSettimaDomanda" onclick="finishQuiz()">Conferma</button>
+      </div>
+    </div>
+    <!--SEVENTH QUESTION-->
+  </div>
+</form>
+  <script src="./js/questionario.js"></script>
+  <script src="./js/controllaForm.js"></script>
+  <script src="./js/invio_risposte.js"></script>
+</body>
+</html>
+

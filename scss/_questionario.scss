@@ -1,0 +1,131 @@
+@import "./variabili";
+
+#questionarioBody{
+    background-image: linear-gradient(to right, #5325fa, #ee5108);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .question{
+        padding: 20px;
+        height: fit-content;
+        width: 300px;
+        border-radius: 20px;
+        background-image: linear-gradient(to right, #340a79, #48149b);
+        box-shadow: 0px 2px 14px rgb(214, 214, 255);
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 850px){
+            padding: 40px;
+            height: fit-content;
+            width: 200px;
+        }
+        #title{
+            width: 100%;
+            h2{
+                margin-left: 10px;
+                color: $textColor2;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        }
+        #question{
+            width: 100%;
+            p{
+                margin-left: 10px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: bold;
+                font-size: 1.3em;
+                color: #f39911;
+            }
+        }
+        #options{
+            width: 100%;
+            ul{
+                padding: 2px;
+                li{
+                    list-style-type: none;
+                    margin-top: 10px;
+                    color: white;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-size: 1em;
+                }
+            }           
+            select{
+                margin-bottom: 20px;
+                width: 100%;
+                padding: 10px;
+                background-color: #19043a;
+                border: none;
+                option{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1em;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+            }
+            #finePar{
+                color: white;
+                margin-left: 10px;
+                font-size: 1.1em;
+                font-weight: bold;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+        }
+        #buttons{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            .back-button{
+                background-color: #f57118;
+                padding: 12px;
+                border: none;
+                color: white;
+                border-radius: 20px;
+                font-size: 1em;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: bold;
+                cursor: pointer;
+                min-width: 100px;
+                box-shadow: 0px 1px 6px #e0ceff;
+                margin-right: 10px;
+                max-height: 40px;
+                text-align: center;
+            }
+            .back-button:hover{
+                background-color: #f5b938;
+            }
+            .next-button{
+                background-color: #f57118;
+                padding: 12px;
+                border: none;
+                color: white;
+                border-radius: 20px;
+                font-size: 1em;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: bold;
+                box-shadow: 0px 1px 6px #e0ceff;
+                cursor: pointer;
+                margin-left: 10px;
+                min-width: 100px;
+                max-height: 40px;
+                text-align: center;
+            }
+            .next-button:hover{
+                background-color: #f5b938;
+            }
+        }
+        .avviso{
+            border: solid 2px rgb(164, 214, 247);
+            background-color: rgb(18, 19, 102);
+            border-radius: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+            p{
+                font-size: 0.9em;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: bold;
+                color: rgb(164, 214, 247);
+            }
+        }
+    }
+}

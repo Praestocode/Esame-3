@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Lavori</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #5325fa, #ee5108);
+        }
+        #headL{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+        th{
+            background-color: #1d0b5c;
+            padding: 6px;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+        }
+        td{
+            background-color: #3918af;
+            padding: 4px;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+        }
+        #bodyL{
+            background-color: #1d0b5c;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            min-height: 400px;
+        }
+        #rightL{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #leftL{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #insertL{
+            background-color: rgb(104, 54, 219);
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        #modeL{
+            background-color: rgb(104, 54, 219);
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        a{
+            text-decoration: underline;
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="goBack"><a href="./gestione_generale.html">Torna indietro</a></div>
+    <div id="headL">
+        <h1>Lavori in Corso</h1>
+        <div id="lavoriInCorsoContainer" data-tipo="lavori_in_corso"></div>
+    
+        <h1>Progetti Conclusi</h1>
+        <div id="progettiConclusiContainer" data-tipo="progetti_conclusi"></div>
+    </div>
+    <div id="bodyL">
+        <div id="leftL">
+            <h2>Inserisci Nuovo Lavoro</h2>
+            <form id="inserisciForm">
+                <label for="tipoLavoro">Tipo di Lavoro:</label>
+                <select id="tipoLavoro" name="tipoLavoro" required>
+                    <option value="lavori_in_corso">Lavori in Corso</option>
+                    <option value="progetti_conclusi">Progetti Conclusi</option>
+                </select><br><br>
+        
+                <label for="titolo">Titolo:</label><br>
+                <input type="text" id="titolo" name="titolo" required><br><br>
+        
+                <label for="immagine">Immagine:</label><br>
+                <input type="text" id="immagine" name="immagine" required><br><br>
+        
+                <label for="descrizione">Descrizione:</label><br>
+                <textarea id="descrizione" name="descrizione" required></textarea><br><br>
+        
+                <input type="submit" id="insertL" value="Inserisci">
+            </form>
+        </div>
+    <div id="rightL">
+<!--MODIFICA-->
+<h2>Ricerca Lavoro</h2>
+<input type="text" id="ricercaTitolo" placeholder="Inserisci il titolo del lavoro"><br>
+<button onclick="cercaLavoro()">Cerca</button>
+
+<!-- Form di modifica -->
+<h2>Modifica Lavoro</h2>
+<form id="modificaForm">
+    <label for="modificaTitolo">Titolo:</label><br><br>
+    <input type="text" id="modificaTitolo" name="modificaTitolo" required><br><br>
+
+    <label for="modificaImmagine">Immagine:</label><br><br>
+    <input type="text" id="modificaImmagine" name="modificaImmagine" required><br><br>
+
+    <label for="modificaDescrizione">Descrizione:</label><br><br>
+    <textarea id="modificaDescrizione" name="modificaDescrizione" required></textarea><br><br>
+
+    <input type="submit" id="modeL" value="Modifica">
+</form>
+    </div>
+    </div>
+
+
+    <script src="/js/lavori_in_corso.js"></script>
+    <script src="/js/progetti_conclusi.js"></script>
+    <script src="/js/scriptComune.js"></script>
+    <script src="/js/modifica_lavoro.js"></script>
+</body>
+</html>

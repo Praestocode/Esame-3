@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body id="bodyIndex">
+    <!--TOPNAV-->
+    <div id="topnav">
+        <img id="logo" src="./immagini/Praesto-logo.png" alt="logo">
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+        <div class="menu-items">
+            <ul>
+                <li><a href="./prodotti.html">Prodotti</a></li>
+                <li id="liSpecial"><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./contatti.html"><img id="tel" src="./immagini/iconaTel.png" alt="icona"></a></li>
+                <li id="accessoLink"><a href="#">Accedi</a></li>
+                <li id="registerLink"><a href="#">Registrati</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--TOPNAV-->
+    <!--REGISTRAZIONE-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Crea un account</h2>
+            <form action="./backend/registrazione.php" id="registrationForm" method="post">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required><br><br>
+                <input type="text" id="cognome" name="cognome" placeholder="Cognome" required><br><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+                <label for="terms">Registrandoti accetti i nostri  <a href="#">termini di servizio</a>.</label><br><br>
+                <input type="submit" id="invio" value="Registrati">
+            </form>
+        </div>
+    </div>   
+    <!--REGISTRAZIONE-->
+    <!--ACCESSO-->
+    <div id="modalAccesso" class="modal">
+        <div class="modal-content">
+            <span class="close-accesso">&times;</span>
+            <h2>Bentornato!</h2>
+            <form action="./backend/accesso.php" id="accessoForm" method="post">
+                <input type="email" id="emailAcc" name="email" placeholder="Email" required><br><br>
+                <input type="password" id="passwordAcc" name="password" placeholder="Password" required><br><br>
+                <div id="passwordError" class="error-message"></div>
+                <label for="terms"><a href="#">Password dimenticata?</a></label><br><br>
+                <input type="submit" id="accedi" value="Accedi">
+            </form>
+        </div>
+    </div>
+    <!--ACCESSO-->
+    <div id="main">
+        <div id="firstBlock">
+            <div id="overlayText">
+                <div id="top">
+                    <p>Make it our way.</p>
+                </div>
+                <div id="bottom">
+                    <p>Make it</p>
+                    <img src="./immagini/Praesto-logo.png" alt="">
+                </div>
+            </div>
+            <div id="call2Action">
+                <div id="left">
+                    <p>Crea il tuo logo</p>
+                </div>
+                <div id="right">
+                    <button button id="animatedButton">Registrati</button>
+                </div>
+            </div>
+        </div>
+        <div id="secondBlock">
+            <div id="top2">
+                <p>Veloce. 4 step.</p>
+            </div>
+            <div id="bottom2">
+                <div class="card">
+                    <div class="imgCard"><img src="./immagini/icon1.png" alt="icona1"></div>
+                    <div class="par"><p>Registrati</p></div>
+                </div>
+                <div class="card">
+                    <div class="imgCard"><img src="./immagini/icon2.png" alt="icona1"></div>
+                    <div class="par"><p>Compila il form</p></div>
+                </div>
+                <div class="card">
+                    <div class="imgCard"><img src="./immagini/icon3.png" alt="icona1"></div>
+                    <div class="par"><p>Scegli tra 3 opzioni</p></div>
+                </div>
+                <div class="card">
+                    <div class="imgCard"><img src="./immagini/icon4.png" alt="icona1"></div>
+                    <div class="par"><p>Ricevi esattamente ciò che vuoi</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="thirdBlock">
+            <div id="left2">
+            <div id="top3">
+                <div class="block">
+                    <img src="./immagini/iconaHome1.png" alt="icona1">
+                    <p class="testo-gradient">tempo</p>
+                </div>
+                <div class="block">
+                    <img src="./immagini/IconaHome3.png" alt="icona2">
+                    <p class="testo-gradient">contatti</p>
+                </div>
+            </div>
+            <div id="bottom3">
+                <div class="block">
+                    <img src="./immagini/IconaHome4.png" alt="icona3">
+                    <p class="testo-gradient">scelta</p>
+                </div>
+                <div class="block">
+                    <img src="./immagini/IconaHome2.png" alt="icona4">
+                    <p class="testo-gradient">review</p>
+                </div>
+            </div>
+            </div>
+            <div id="right2">
+                <div id="top4">
+                    <p>Sono i vantaggi che avrai scegliendoci</p>
+                </div>
+                <div id="bottom4">
+                    <div id="one"><p>Abbiamo a cuore il tuo tempo. Il 90% delle nostre delivery avviene in 48h.</p></div>
+                    <div id="two"><p>Dopo il tuo primo ordine ti verrà fornito un contatto, reperibile 24/7.</p></div>
+                    <div id="three"><p>Ti offriamo una prima selezione per capire esattamente ciò che hai in mente.</p></div>
+                    <div id="four"><p>Non sei convinto? con noi hai sempre una revisione gratuita prima della consegna.</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy;2020-2023, <a href='#'>cookies</a>, <a href='#'>privacy policy</a>, &reg;Praesto</p>
+        </div>   
+        <!--COOKIE BAR-->
+        <div id="cookie-bar">
+            <p style="font-weight: bold; font-size: 1.1em;">Questo sito utilizza i cookie per garantire la migliore esperienza utente.</p><a href="cookiepolicy.html" style="color: rgb(80, 10, 80); font-weight: bold; text-decoration: none;">Leggi la nostra politica sui cookie</a></p>
+            <button id="accept-btn">Accetta</button>
+            <button id="reject-btn">Rifiuta</button>
+        </div> 
+        <!--COOKIE BAR--> 
+    </div>
+    <!--JAVASCRIPT-->
+    <script src="./js/registrazione.js"></script>
+    <script src="./js/topnav.js"></script>
+    <script src="./js/cookie.js"></script>
+    <script src="./js/button.js"></script>
+    <script src="./js/cards.js"></script>
+    <script src="./js/accesso.js"></script>
+    <!--JAVASCRIPT-->
+</body>
+</html>
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prodotti</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body id="bodyProdotti">
+    <!--TOPNAV-->
+    <div id="topnav">
+        <img id="logo" src="./immagini/Praesto-logo.png" alt="logo">
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+        <div class="menu-items">
+            <ul>
+                <li><a href="./index.html">Homepage</a></li>
+                <li id="liSpecial"><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./contatti.html"><img id="tel" src="./immagini/iconaTel.png" alt="icona"></a></li>
+                <li id="accessoLink2"><a href="./accedi.html">Accedi</a></li>
+                <li id="registerLink"><a href="#">Registrati</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--TOPNAV-->
+            <!--REGISTRAZIONE-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Crea un account</h2>
+            <form id="registrationForm">
+                <input type="text" id="fullname" name="fullname" placeholder="Full name" required><br><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+                <label for="terms">Registrandoti accetti i nostri  <a href="#">termini di servizio</a>.</label><br><br>
+                <input type="submit" id="invio" value="Registrati">
+            </form>
+        </div>
+    </div>   
+    <!--REGISTRAZIONE-->
+    <!--ACCESSO-->
+    <div id="modalAccesso" class="modal">
+        <div class="modal-content">
+            <span class="close-accesso">&times;</span>
+            <h2>Bentornato!</h2>
+            <form action="./backend/accesso.php" id="accessoForm" method="post">
+                <input type="email" id="emailAcc" name="email" placeholder="Email" required><br><br>
+                <input type="password" id="passwordAcc" name="password" placeholder="Password" required><br><br>
+                <div id="passwordError" class="error-message"></div>
+                <label for="terms"><a href="#">Password dimenticata?</a></label><br><br>
+                <input type="submit" id="accedi" value="Accedi">
+            </form>
+        </div>
+    </div>
+    <!--ACCESSO-->
+        <div id="main">
+            <div class="package" id="first">
+                <div class="header"><p>Starter</p></div>
+                <div class="body">
+                    <div class="text">
+                        <ul>
+                            <li>Creazione logo</li>
+                            <li class="strikethrough">Creazione logotipo</li>
+                            <li>Versioni del logo per utilizzo online e stampa</li>
+                            <li class="strikethrough">Set di colori aziendali (palette)</li>
+                            <li class="strikethrough">Selezione font aziendale</li>
+                            <li class="strikethrough">Coordinato grafico aziendale (mockup)</li>
+                            <li class="strikethrough">Progettazione di materiale pubblicitario (banner, volantini, brochure, biglietti da visita)</li>
+                            <br>
+                            <br>
+                            <li class="strikethrough">Numero assistenza 24/7</li>
+                            <li>Selezione iniziale (2 proposte)</li>
+                            <li>1 Revisione prima della consegna</li>
+                        </ul>
+                    </div>
+                    <div class="buy">
+                        <button><a href="#">€199,99</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="package" id="second">
+                <div class="header"><p>Pro</p></div>
+                <div class="body">
+                    <div class="text">
+                        <ul>
+                            <li>Creazione logo</li>
+                            <li>Creazione logotipo</li>
+                            <li>Versioni del logo per utilizzo online e stampa</li>
+                            <li>Set di colori aziendali (palette)</li>
+                            <li class="strikethrough">Selezione font aziendale</li>
+                            <li class="strikethrough">Coordinato grafico aziendale (mockup)</li>
+                            <li class="strikethrough">Progettazione di materiale pubblicitario (banner, volantini, brochure, biglietti da visita)</li>
+                            <br>
+                            <br>
+                            <li>Numero assistenza 24/7</li>
+                            <li>Selezione iniziale (2 proposte)</li>
+                            <li>1 Revisione prima della consegna</li>
+                        </ul>
+                    </div>
+                    <div class="buy">
+                        <button><a href="#">€229,99</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="package" id="third">
+                <div class="header"><p>Executive</p></div>
+                <div class="body">
+                    <div class="text">
+                        <ul>
+                            <li>Creazione logo</li>
+                            <li>Creazione logotipo</li>
+                            <li>Versioni del logo per utilizzo online e stampa</li>
+                            <li>Set di colori aziendali (palette)</li>
+                            <li>Selezione font aziendale</li>
+                            <li>Coordinato grafico aziendale (mockup)</li>
+                            <li>Progettazione di materiale pubblicitario (banner, volantini, brochure, biglietti da visita)</li>
+                            <br>
+                            <br>
+                            <li>Numero assistenza 24/7</li>
+                            <li>Selezione iniziale (3 proposte)</li>
+                            <li>2 Revisioni prima della consegna</li>
+                        </ul>
+                    </div>
+                    <div class="buy">
+                        <button><a href="#">€499,99</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--COOKIE BAR-->
+        <div id="cookie-bar">
+            <p style="font-weight: bold; font-size: 1.1em;">Questo sito utilizza i cookie per garantire la migliore esperienza utente.</p><a href="cookiepolicy.html" style="color: rgb(80, 10, 80); font-weight: bold; text-decoration: none;">Leggi la nostra politica sui cookie</a></p>
+            <button id="accept-btn">Accetta</button>
+            <button id="reject-btn">Rifiuta</button>
+        </div> 
+        <!--COOKIE BAR--> 
+        <!--JAVASCRIPT-->
+        <script src="./js/topnav.js"></script>
+        <script src="./js/cookie.js"></script>
+        <script src="./js/accesso.js"></script>
+        <script src="./js/registrazione.js"></script>
+        <!--JAVASCRIPT-->
+</body>
+</html>

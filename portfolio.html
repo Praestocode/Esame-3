@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body id="bodyPortfolio">
+    <!--TOPNAV-->
+    <div id="topnav">
+        <img id="logo" src="./immagini/Praesto-logo.png" alt="logo">
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+        <div class="menu-items">
+            <ul>
+                <li><a href="./index.html">Homepage</a></li>
+                <li id="liSpecial"><a href="./prodotti.html">Prodotti</a></li>
+                <li><a href="./contatti.html"><img id="tel" src="./immagini/iconaTel.png" alt="icona"></a></li>
+                <li id="accessoLink2"><a href="./accedi.html">Accedi</a></li>
+                <li id="registerLink"><a href="#">Registrati</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--TOPNAV-->
+    <!--REGISTRAZIONE-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Crea un account</h2>
+            <form action="./backend/registrazione.php" id="registrationForm" method="post">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required><br><br>
+                <input type="text" id="cognome" name="cognome" placeholder="Cognome" required><br><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+                <label for="terms">Registrandoti accetti i nostri  <a href="#">termini di servizio</a>.</label><br><br>
+                <input type="submit" id="invio" value="Registrati">
+            </form>
+        </div>
+    </div>   
+    <!--REGISTRAZIONE-->
+    <!--ACCESSO-->
+    <div id="modalAccesso" class="modal">
+        <div class="modal-content">
+            <span class="close-accesso">&times;</span>
+            <h2>Bentornato!</h2>
+            <form action="./backend/accesso.php" id="accessoForm" method="post">
+                <input type="email" id="emailAcc" name="email" placeholder="Email" required><br><br>
+                <input type="password" id="passwordAcc" name="password" placeholder="Password" required><br><br>
+                <div id="passwordError" class="error-message"></div>
+                <label for="terms"><a href="#">Password dimenticata?</a></label><br><br>
+                <input type="submit" id="accedi" value="Accedi">
+            </form>
+        </div>
+    </div>
+    <!--ACCESSO-->
+        <div id="container">
+            <!--PROGETTI CONCLUSI-->
+            <div id="above">
+                <div id="testa">
+                    <h3>Progetti conclusi</h3>
+                </div>
+                <div id="corpo">
+                    <div class="project" style="display: none;">
+                        <div class="contents">
+                            <div class="titolo">ciaoo</div>
+                            <div class="immagine"><img src="" alt=""></div>
+                            <div class="descrizione">ciaoo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--PROGETTI CONCLUSI-->
+            <!--LAVORI IN CORSO-->
+            <div id="under">
+                <div id="testa2">
+                    <h3>Lavori in corso</h3>
+                </div>
+                <div id="corpo2">
+                    <div class="project2" style="display: none;">
+                        <div class="contents">
+                            <div class="titolo"></div>
+                            <div class="immagine"><img src="" alt=""></div>
+                            <div class="descrizione"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--LAVORI IN CORSO-->
+        </div>
+        <script src="./js/topnav.js"></script>
+        <script src="./js/accesso.js"></script>
+        <script src="./js/getLavori.js"></script>
+        <script src="./js/registrazione.js"></script>
+</body>
+</html>
